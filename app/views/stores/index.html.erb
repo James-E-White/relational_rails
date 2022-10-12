@@ -1,0 +1,7 @@
+<h1>Comic Book Stores</h1>
+<p>This will be where all the pretty motherfuckers get their comic books!</p>
+<% @stores.each do |store| %>
+  <h3><%= store.name %></h3>
+  <p>Square Footage:<%= store.square_footage %></p>
+  <p>Online Sales:<%= store.online_sales %></p>
+<% end %>
