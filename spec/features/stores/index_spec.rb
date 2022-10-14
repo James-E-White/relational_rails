@@ -46,8 +46,8 @@ end
       it 'displays the Publishers name of visited ' do
       store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
       store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true) 
-      publisher = Publisher.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
-      publisher_2 = Publisher.create!(name: "Marvel", cost: 4.25, figurines_available: true)
+       publisher = Publisher.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
+       publisher_2 = Publisher.create!(name: "Marvel", cost: 4.25, figurines_available: true)
      
       
        visit "/publishers"
@@ -57,23 +57,22 @@ end
     end
    end 
 
-   [ ] done
+
 
 # User Story 4, Child Show 
-
-# As a visitor
-# When I visit '/child_table_name/:id'
-# Then I see the child with that id including the child's attributes
-# (data from each column that is on the child table)
-   it 'displays the attributes of the childs/Publisher' do  
-      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
-      store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true) 
-      publisher = Publisher.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
-      publisher_2 = Publisher.create!(name: "Marvel", cost: 4.25, figurines_available: true)
+#   [ ] done
+#         descirbe As a visitor
+#        describe When I visit '/child_table_name/:id'
+#      Then I see the child with that id including the child's attributes
+#       (data from each column that is on the child table)
+      it 'displays the attributes of the childs/Publisher' do  
+       store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
+       store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true) 
+       publisher = Publisher.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
+       publisher_2 = Publisher.create!(name: "Marvel", cost: 4.25, figurines_available: true)
        visit "/publishers/#{publisher.id}"  
-      expect(page).to have_content(publisher.id)
-      expect(page).to have_content(publisher_2.id)
+       expect(page).to have_content(publisher.id)
+       expect(page).to have_content(publisher_2.id)
    end
-  end
+end
 
-end 
