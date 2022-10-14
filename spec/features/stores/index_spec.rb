@@ -72,7 +72,15 @@ end
        publisher_2 = Publisher.create!(name: "Marvel", cost: 4.25, figurines_available: true)
        visit "/publishers/#{publisher.id}"  
        expect(page).to have_content(publisher.id)
-       expect(page).to have_content(publisher_2.id)
+       expect(page).to_not have_content(publisher_2.id)
    end
+# [ ] done
+# User Story 5, Parent Children Index 
+# As a visitor
+# When I visit '/parents/:parent_id/child_table_name'
+# Then I see each Child that is associated with that Parent with each Child's attributes
+# (data from each column that is on the child table)
+
+
 end
 

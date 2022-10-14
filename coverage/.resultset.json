@@ -302,12 +302,16 @@
         "lines": [
           1,
           1,
-          2,
+          1,
+          null,
+          null,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1665712504
+    "timestamp": 1665713030
   }
 }

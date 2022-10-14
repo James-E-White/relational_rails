@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get '/stores', to: 'stores#index'
   get '/stores/:id', to: 'stores#show'
   get '/publishers', to: 'publishers#index'
-  get '/publishers/:id', to: 'publishers#index' 
+  get '/publishers/:id', to: 'publishers#show' 
 end
 
