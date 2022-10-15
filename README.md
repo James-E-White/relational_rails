@@ -1,3 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 User Stories
 A user story is a concise description of functionality that a specific user should experience while using your application. In these stories, we will refer to the “one” side of the relationship as the “parent” and the “many” side of the relationship as the “children/child”. In the Pets/Shelters example, Shelter would be the parent, and Pets would be the children.
 
