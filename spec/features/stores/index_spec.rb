@@ -56,9 +56,10 @@ RSpec.describe 'the stores show page' do
      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
      store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
      visit "/stores" 
-   
-      expect(page).to have_content(store.created_at)
-      expect(page).to have_content(store_2.created_at) 
+      #save_and_open_page
+      expect("Dusty's Books").to appear_before("Ava's Books")
+    
+      
   end
 
   #   User Story 7, Parent Child Count
@@ -75,9 +76,37 @@ RSpec.describe 'the stores show page' do
       publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
       publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
       visit "/stores/#{store.id}" 
-      save_and_open_page
+      #save_and_open_page
       expect(store.count_of_publishers).to eq(2)
       expect(store_2.count_of_publishers).to eq(0)
+      
   end
+
+# User Story 8, Child Index Link
+# As a visitor
+# When I visit any page on the site
+# Then I see a link at the top of the page that takes me to the Child Index
+# [ ] done
+    describe 'displays a link to publishers on anypage of the site'
+    it' creates a link to publisher at the top of the page' do 
+      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
+      store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
+      publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
+      publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
+       visit "/publishers" 
+        expect(current_path).to eq("/publishers")
+      end
+
+      # it 'has a link to /publishers' do
+      #   click_on "Stores Index"
+
+      #   expect(current_path).to eq("/stores")
+      # end
+
+      # it 'has a link to the stores show page' do
+      #   click_on @store_1.name
+
+      #   expect(current_path).to eq("/storess/#{store_2.id}")
+      # end
 end
 

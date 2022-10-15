@@ -304,8 +304,21 @@
           1,
           null
         ]
+      },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/app/controllers/publishers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1665858673
+    "timestamp": 1665868834
   }
 }
