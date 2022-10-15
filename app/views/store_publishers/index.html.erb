@@ -1,9 +1,12 @@
-<h1>Publishers</h1>
-<p>This will be where the stores get their comic books from!</p>
-<% @publishers.each do |publisher| %>
+<h1>List of Publishers by <%= @store.name %></h1>
+<% @store.publishers.each do |publisher| %>
   <h3><%= publisher.name %></h3>
+  <p>id: <%= publisher.id %></p>
   <p>Cost: <%= publisher.cost %></p>
   <p>Figurines Available: <%= publisher.figurines_available %></p>
   <p>Log created: <%= publisher.created_at %></p>
   <p>Log updated: <%= publisher.updated_at %></p>
 <% end %>
+
+
+

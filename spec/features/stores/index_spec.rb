@@ -45,7 +45,17 @@ RSpec.describe 'the stores show page' do
       expect(page).to_not have_content(store_2.online_sales)
     end
 
+# User Story 6, Parent Index sorted by Most Recently Created 
 
+# As a visitor
+# When I visit the parent index,
+# I see that records are ordered by most recently created first
+# And next to each of the records I see when it was created
+# [ ] done
+     it 'displays the stores by most recently created first'do 
+     store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
+     store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
+     visit "/stores/#{store.id}"  
 
 end
 

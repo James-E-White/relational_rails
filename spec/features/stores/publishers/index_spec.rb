@@ -11,19 +11,19 @@ RSpec.describe 'the stores show page' do
      it "displays the associated attributes with each publisher" do 
        
       store = Store.create!(id: 1, name: "Dusty's Books", square_footage: 1100, online_sales: false)
-      store_2 = Store.create!(id: 2, name: "Ava's Books", square_footage: 1500, online_sales: true)
-      publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
-      publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
+      #store_2 = Store.create!(id: 2, name: "Ava's Books", square_footage: 1500, online_sales: true)
+      publisher = store.publishers.create!(id: 1, name: "DC Comics", cost: 3.95, figurines_available: true)
+      publisher_2 = store.publishers.create!(id: 2, name: "Marvel", cost: 4.25, figurines_available: true)
 
        visit "/stores/#{store.id}/publishers"
        
       expect(page).to have_content(publisher.id)
-      expect(page).to_not have_content(publisher_2.id)
+      expect(page).to have_content(publisher_2.id)
       expect(page).to have_content(publisher.name)
-      expect(page).to_not have_content(publisher_2.name)
+      expect(page).to have_content(publisher_2.name)
       expect(page).to have_content(publisher.cost)
-      expect(page).to_not have_content(publisher_2.cost)
+      expect(page).to have_content(publisher_2.cost)
       expect(page).to have_content(publisher.figurines_available)
-      expect(page).to_not have_content(publisher_2.figurines_available)
+      expect(page).to have_content(publisher_2.figurines_available)
      end 
 end
