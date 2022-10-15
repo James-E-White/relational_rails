@@ -1,5 +1,5 @@
-# require "rails_helper"
+require "rails_helper"
 
-# RSpec.describe Publisher do 
-#   it {should belong_to :stores}
-# end
+RSpec.describe Publisher do 
+  it {should belong_to :store}
+end

@@ -55,7 +55,10 @@ RSpec.describe 'the stores show page' do
      it 'displays the stores by most recently created first'do 
      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
      store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
-     visit "/stores/#{store.id}"  
-
+     visit "/stores" 
+     save_and_open_page
+      expect(page).to have_content(store.created_at)
+      expect(page).to have_content(store_2.created_at) 
+  end
 end
 
