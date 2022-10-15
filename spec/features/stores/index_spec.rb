@@ -56,9 +56,28 @@ RSpec.describe 'the stores show page' do
      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
      store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
      visit "/stores" 
-     save_and_open_page
+   
       expect(page).to have_content(store.created_at)
       expect(page).to have_content(store_2.created_at) 
+  end
+
+  #   User Story 7, Parent Child Count
+
+# As a visitor
+# When I visit a parent's show page
+# I see a count of the number of children associated with this parent
+# Usability
+# [ ] done
+    describe '#count of publishers for each store'
+    it 'displays the total_count_of_publishers for each store' do 
+      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
+      store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
+      publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
+      publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
+      visit "/stores/#{store.id}" 
+      save_and_open_page
+      expect(store.count_of_publishers).to eq(2)
+      expect(store_2.count_of_publishers).to eq(0)
   end
 end
 
