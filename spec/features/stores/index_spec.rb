@@ -89,6 +89,24 @@ RSpec.describe 'the stores show page' do
 # [ ] done
     describe 'displays a link to publishers on anypage of the site'
     it' creates a link to publisher at the top of the page' do 
-      
+      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
+      store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
+      publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
+      publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
+       visit "/publishers" 
+        expect(current_path).to eq("/publishers")
+      end
+
+      # it 'has a link to /publishers' do
+      #   click_on "Stores Index"
+
+      #   expect(current_path).to eq("/stores")
+      # end
+
+      # it 'has a link to the stores show page' do
+      #   click_on @store_1.name
+
+      #   expect(current_path).to eq("/storess/#{store_2.id}")
+      # end
 end
 
