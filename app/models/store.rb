@@ -1,4 +1,4 @@
 class Store < ApplicationRecord
-    #has_many :publishers
+    has_many :publishers
     
 end

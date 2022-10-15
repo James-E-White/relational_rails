@@ -2,6 +2,7 @@
 <p>This will be where all the pretty mother@#$!%s get their comic books!</p>
 <% @stores.each do |store| %>
   <h3><%= store.name %></h3>
+  <p>Store id: <%= store.id %></p>
   <p>Square Footage: <%= store.square_footage %></p>
   <p>Online Sales: <%= store.online_sales %></p>
   <p>Log created: <%= store.created_at %></p>

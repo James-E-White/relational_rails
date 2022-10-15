@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/stores/:id', to: 'stores#show'
   get '/publishers', to: 'publishers#index'
   get '/publishers/:id', to: 'publishers#show' 
+  get '/stores/:store_id/publishers', to: 'store_publishers#index'
 end
 
