@@ -81,32 +81,66 @@ RSpec.describe 'the stores show page' do
       expect(store_2.count_of_publishers).to eq(0)
       
   end
-
-# User Story 8, Child Index Link
+#User Story 10, Parent Child Index Link
 # As a visitor
-# When I visit any page on the site
-# Then I see a link at the top of the page that takes me to the Child Index
-# [ ] done
-    describe 'displays a link to publishers on anypage of the site'
-    it' creates a link to publisher at the top of the page' do 
+# When I visit a parent show page ('/parents/:id')
+# Then I see a link to take me to that parent's `child_table_name` 
+#page ('/parents/:id/child_table_name')
+   describe 'as a visitor' do 
+     describe 'displays a link to publishers on stores on the site' do 
+      it "creates a link to the Store '/publishers' on the page" do
       store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
       store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
       publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
       publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
-       visit "/publishers" 
-        expect(current_path).to eq("/publishers")
+      
+      visit "/stores/#{store.id}"  
+      expect(page).to have_selector(:css, "a[href='/stores/#{store.id}/publishers']")
+      
+    end
+  end 
+ end 
+  
+# User Story 11, Parent Creation 
+
+# As a visitor
+# When I visit the Parent Index page
+# Then I see a link to create a new Parent record, "New Parent"
+# When I click this link
+# Then I am taken to '/parents/new' where I  see a form for a new parent record
+# When I fill out the form with a new parent's attributes:
+# And I click the button "Create Parent" to submit the form
+# Then a `POST` request is sent to the '/parents' route,
+# a new parent record is created,
+# and I am redirected to the Parent Index page where I see the new Parent displayed.
+# [ ] done
+     describe 'as a visitor I see a link to create "New Store"' do 
+      describe 'form to fill out for new parents attributes' do 
+        describe 'when I click button a post request is sent to create a new parent' do 
+        it 'links to a new store page' do 
+         store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
+         store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
+         publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
+         publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
+          visit '/stores'
+
+          
+          expect(page).to have_link("New Store")
+          click_link "New Store"
+          expect(current_path).to eq("/stores/new")
+        end
       end
-
-      # it 'has a link to /publishers' do
-      #   click_on "Stores Index"
-
-      #   expect(current_path).to eq("/stores")
-      # end
-
-      # it 'has a link to the stores show page' do
-      #   click_on @store_1.name
-
-      #   expect(current_path).to eq("/storess/#{store_2.id}")
-      # end
-end
-
+     end
+   end
+       it 'can create a new store' do 
+        visit '/stores/new'
+        click_link "New Store"
+        fill_in('Name', with: 'James Gems')
+        fill_in("sq_feet", with: 1600)
+        fill_in("online_sales", with: "true")
+        click_button('Create Store')
+        
+         expect(current_path).to eq("/stores")
+         expect(page).to have_content("James Gems")
+       end
+end 
