@@ -126,17 +126,16 @@ RSpec.describe 'the stores show page' do
 
           
           expect(page).to have_link("New Store")
-          click_link "New Store"
-          expect(current_path).to eq("/stores/new")
+          
+          expect(current_path).to eq("/stores")
         end
       end
      end
    end
        it 'can create a new store' do 
         visit '/stores/new'
-        click_link "New Store"
         fill_in('Name', with: 'James Gems')
-        fill_in("sq_feet", with: 1600)
+        fill_in("square_footage", with: 1600)
         fill_in("online_sales", with: "true")
         click_button('Create Store')
         

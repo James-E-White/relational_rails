@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-10-16T18:00:21-07:00">2022-10-16T18:00:21-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-10-16T18:33:00-07:00">2022-10-16T18:33:00-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  94.92%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.02
+         1.08
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>26</b> files in total.
+    <b>27</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>177</b> relevant lines,
-    <span class="green"><b>168</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed. </span>
+    <b>180</b> relevant lines,
+    <span class="green"><b>180</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  94.92%
+  100.0%
 </span>
 )
   </div>
@@ -82,6 +82,17 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#78d6d7d8a36a64bfff8b5cdb2a3c48e53ca6d074" class="src_link" title="app/controllers/publishers_controller.rb">app/controllers/publishers_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#5125158d44eedda663ed6594d0ec4063accd4f1f" class="src_link" title="app/controllers/store_publishers_controller.rb">app/controllers/store_publishers_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">6</td>
@@ -94,12 +105,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#98930d2a1d4482412fd39f6f0529d9f29bf1e1ed" class="src_link" title="app/controllers/stores_controller.rb">app/controllers/stores_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">80.00 %</td>
-            <td class="cell--number">25</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">10</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">1.40</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.80</td>
             
           </tr>
         
@@ -303,12 +314,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#79fa1a4d6871f9071233623360ced0ca46db613a" class="src_link" title="spec/features/stores/index_spec.rb">spec/features/stores/index_spec.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">90.00 %</td>
-            <td class="cell--number">146</td>
-            <td class="cell--number">70</td>
-            <td class="cell--number">63</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">0.90</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">145</td>
+            <td class="cell--number">68</td>
+            <td class="cell--number">68</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -426,6 +437,136 @@
 </div>
 
       
+        <div class="source_table" id="78d6d7d8a36a64bfff8b5cdb2a3c48e53ca6d074">
+  <div class="header">
+    <h3>app/controllers/publishers_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class PublishersController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def index</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @publishers = Publisher.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def show </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     @publisher = Publisher.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="5125158d44eedda663ed6594d0ec4063accd4f1f">
   <div class="header">
     <h3>app/controllers/store_publishers_controller.rb</h3>
@@ -527,8 +668,8 @@
   <div class="header">
     <h3>app/controllers/stores_controller.rb</h3>
     <h4>
-      <span class="red">
-  80.0%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -538,8 +679,8 @@
 
     <div class="t-line-summary">
       <b>10</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -572,8 +713,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="3">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="3">
+            <span class="hits">4</span>
             
 
             
@@ -583,8 +724,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="4">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="4">
+            <span class="hits">4</span>
             
 
             
@@ -682,8 +823,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="13">
-            
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
             
 
             
@@ -699,7 +840,7 @@
 
             
 
-            <code class="ruby">      store_id: params[:id],</code>
+            <code class="ruby">      square_footage: params[:square_footage],</code>
           </li>
         </div>
       
@@ -710,29 +851,29 @@
 
             
 
-            <code class="ruby">      square_footage: params[:square_footage],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
             <code class="ruby">      online_sales: params[:online_sales])</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="17">
-            
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
             
 
             
 
             <code class="ruby">      redirect_to &quot;/stores&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -743,23 +884,12 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
@@ -770,7 +900,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="21">
+          <li class="covered" data-hits="3" data-linenumber="20">
             <span class="hits">3</span>
             
 
@@ -781,7 +911,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
@@ -792,7 +922,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
@@ -803,7 +933,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -814,7 +944,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -3723,8 +3853,8 @@
   <div class="header">
     <h3>spec/features/stores/index_spec.rb</h3>
     <h4>
-      <span class="yellow">
-  90.0%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -3733,9 +3863,9 @@
     
 
     <div class="t-line-summary">
-      <b>70</b> relevant lines.
-      <span class="green"><b>63</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <b>68</b> relevant lines.
+      <span class="green"><b>68</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -5154,24 +5284,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="129">
+          <li class="never" data-hits="" data-linenumber="129">
+            
+            
+
+            
+
+            <code class="ruby">          </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="130">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">          click_link &quot;New Store&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="130">
-            
-            
-
-            
-
-            <code class="ruby">          expect(current_path).to eq(&quot;/stores/new&quot;)</code>
+            <code class="ruby">          expect(current_path).to eq(&quot;/stores&quot;)</code>
           </li>
         </div>
       
@@ -5248,35 +5378,24 @@
 
             
 
-            <code class="ruby">        click_link &quot;New Store&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="138">
-            
-            
-
-            
-
             <code class="ruby">        fill_in(&#39;Name&#39;, with: &#39;James Gems&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="139">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="138">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">        fill_in(&quot;sq_feet&quot;, with: 1600)</code>
+            
+
+            <code class="ruby">        fill_in(&quot;square_footage&quot;, with: 1600)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="140">
-            
+          <li class="covered" data-hits="1" data-linenumber="139">
+            <span class="hits">1</span>
             
 
             
@@ -5286,8 +5405,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="141">
-            
+          <li class="covered" data-hits="1" data-linenumber="140">
+            <span class="hits">1</span>
             
 
             
@@ -5297,7 +5416,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="142">
+          <li class="never" data-hits="" data-linenumber="141">
             
             
 
@@ -5308,8 +5427,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="143">
-            
+          <li class="covered" data-hits="1" data-linenumber="142">
+            <span class="hits">1</span>
             
 
             
@@ -5319,8 +5438,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="144">
-            
+          <li class="covered" data-hits="1" data-linenumber="143">
+            <span class="hits">1</span>
             
 
             
@@ -5330,7 +5449,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="145">
+          <li class="never" data-hits="" data-linenumber="144">
             
             
 
@@ -5341,7 +5460,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="146">
+          <li class="never" data-hits="" data-linenumber="145">
             
             
 
@@ -5521,7 +5640,7 @@
 
             
 
-            <code class="ruby">      store = Store.create!(id: 1, name: &quot;Dusty&#39;s Books&quot;, square_footage: 1100, online_sales: false)</code>
+            <code class="ruby">      store = Store.create!(name: &quot;Dusty&#39;s Books&quot;, square_footage: 1100, online_sales: false)</code>
           </li>
         </div>
       
@@ -5532,7 +5651,7 @@
 
             
 
-            <code class="ruby">      #store_2 = Store.create!(id: 2, name: &quot;Ava&#39;s Books&quot;, square_footage: 1500, online_sales: true)</code>
+            <code class="ruby">      #store_2 = Store.create!(name: &quot;Ava&#39;s Books&quot;, square_footage: 1500, online_sales: true)</code>
           </li>
         </div>
       
@@ -5543,7 +5662,7 @@
 
             
 
-            <code class="ruby">      publisher = store.publishers.create!(id: 1, name: &quot;DC Comics&quot;, cost: 3.95, figurines_available: true)</code>
+            <code class="ruby">      publisher = store.publishers.create!(name: &quot;DC Comics&quot;, cost: 3.95, figurines_available: true)</code>
           </li>
         </div>
       
@@ -5554,7 +5673,7 @@
 
             
 
-            <code class="ruby">      publisher_2 = store.publishers.create!(id: 2, name: &quot;Marvel&quot;, cost: 4.25, figurines_available: true)</code>
+            <code class="ruby">      publisher_2 = store.publishers.create!(name: &quot;Marvel&quot;, cost: 4.25, figurines_available: true)</code>
           </li>
         </div>
       

@@ -11,7 +11,6 @@ class StoresController < ApplicationController
 
     def create 
       store = Store.create(name: params[:name],
-      store_id: params[:id],
       square_footage: params[:square_footage],
       online_sales: params[:online_sales])
       redirect_to "/stores"

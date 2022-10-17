@@ -10,10 +10,10 @@ RSpec.describe 'the stores show page' do
 # (data from each column that is on the child table)
      it "displays the associated attributes with each publisher" do 
        
-      store = Store.create!(id: 1, name: "Dusty's Books", square_footage: 1100, online_sales: false)
-      #store_2 = Store.create!(id: 2, name: "Ava's Books", square_footage: 1500, online_sales: true)
-      publisher = store.publishers.create!(id: 1, name: "DC Comics", cost: 3.95, figurines_available: true)
-      publisher_2 = store.publishers.create!(id: 2, name: "Marvel", cost: 4.25, figurines_available: true)
+      store = Store.create!(name: "Dusty's Books", square_footage: 1100, online_sales: false)
+      #store_2 = Store.create!(name: "Ava's Books", square_footage: 1500, online_sales: true)
+      publisher = store.publishers.create!(name: "DC Comics", cost: 3.95, figurines_available: true)
+      publisher_2 = store.publishers.create!(name: "Marvel", cost: 4.25, figurines_available: true)
 
        visit "/stores/#{store.id}/publishers"
        
