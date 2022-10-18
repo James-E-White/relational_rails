@@ -262,6 +262,69 @@
           null
         ]
       },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/spec/features/publishers/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/spec/features/publishers/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/spec/features/stores/edit_spec.rb": {
         "lines": [
           1,
@@ -362,30 +425,8 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
           null,
           null,
           null,
@@ -413,20 +454,16 @@
           null,
           null,
           null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
           null,
           null,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/spec/features/stores/new_spec.rb": {
+        "lines": [
+          1,
           null,
           null,
           null,
@@ -469,37 +506,6 @@
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ]
@@ -533,6 +539,68 @@
           1,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/spec/features/stores/publishers/show_spec.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/spec/features/stores/publishers/store_publisher_contoller_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/spec/features/stores/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -647,6 +715,23 @@
           null
         ]
       },
+      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/app/controllers/store_publishers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/app/controllers/stores_controller.rb": {
         "lines": [
           1,
@@ -689,22 +774,8 @@
           null,
           null
         ]
-      },
-      "/Users/jameswhite/Desktop/Turing/2mod/solo_project/relational_rails/app/controllers/store_publishers_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1666103064
+    "timestamp": 1666125863
   }
 }

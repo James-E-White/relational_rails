@@ -1,0 +1,11 @@
+
+<h1> Create New Publisher </h1>
+<%= form_with url: "/stores/#{@store.id}/publishers/new", method: :patch, local: true do |form| %>
+<%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :square_footage %>
+  <%= form.number_field :square_footage %>
+  <%= form.label :online_sales %>
+  <%= form.text_field :online_sales %>
+  <%= form.submit "Create New Publisher" %>
+  <% end %>
