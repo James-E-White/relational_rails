@@ -1,0 +1,10 @@
+<h1>Store Update</h1>
+<%= form_with url: "/stores/#{@store.id}", method: :patch, local: true do |form| %>
+<%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :square_footage %>
+  <%= form.number_field :square_footage %>
+  <%= form.label :online_sales %>
+  <%= form.text_field :online_sales %>
+  <%= form.submit "Update #{@store.name}" %>
+<% end %>

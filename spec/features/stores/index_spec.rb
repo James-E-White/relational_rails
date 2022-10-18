@@ -141,5 +141,11 @@ RSpec.describe 'the stores show page' do
         
          expect(current_path).to eq("/stores")
          expect(page).to have_content("James Gems")
+         expect(page).to_not have_content("Alana's Albums")
        end
+
+
+
+
+     
 end 

@@ -10,7 +10,7 @@ class StoresController < ApplicationController
     end
 
     def create 
-      store = Store.create(name: params[:name],
+      store = Store.create!(name: params[:name],
       square_footage: params[:square_footage],
       online_sales: params[:online_sales])
       redirect_to "/stores"
@@ -18,7 +18,22 @@ class StoresController < ApplicationController
 
     def show 
      @store = Store.find(params[:id])
+     
     end
 
+    def edit
+    @store = Store.find(params[:id])
+    
+    end
+
+    def update 
+      store = Store.find(params[:id])
+      store.update(name: params[:name],
+      square_footage: params[:square_footage],
+      online_sales: params[:online_sales])
+      redirect_to '/stores'
+    end 
+    
+    
    
 end

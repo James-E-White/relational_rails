@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/publishers/:id', to: 'publishers#show' 
   get '/stores/:store_id/publishers', to: 'store_publishers#index'
   post '/stores', to: 'stores#create'
+  get '/stores/:id/edit', to: 'stores#edit'
+  patch "/stores/:id", to: "stores#update"
  
 end
 
