@@ -1,9 +1,7 @@
 class StoresController < ApplicationController
     def index 
-     @stores = Store.all
-     @stores = Store.order(:created_at)
-    
-    end
+     @stores = Store.all.order(:created_at)
+     end
     
     def new
 
