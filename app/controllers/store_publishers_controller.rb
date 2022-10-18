@@ -3,4 +3,8 @@ class StorePublishersController < ApplicationController
     @store = Store.find(params[:store_id]) 
     @publisher = @store.publishers
   end
+
+  def new
+    
+  end
 end

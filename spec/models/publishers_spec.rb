@@ -1,5 +1,5 @@
 require "rails_helper"
 
-RSpec.describe Publisher do 
+RSpec.describe Publisher, type: :model do 
   it {should belong_to :store}
 end

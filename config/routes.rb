@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   post '/stores', to: 'stores#create'
   get '/stores/:id/edit', to: 'stores#edit'
   patch "/stores/:id", to: "stores#update"
- 
+  get '/stores/:store_id/publishers/new', to: 'store_publishers#new'
 end
 
